@@ -9,8 +9,8 @@ import os
 app = Flask(__name__)
 
 # Model ve seçilmiş özellikleri yükle
-MODEL_PATH = "/Users/aynurbaktemur/Desktop/hasar_api/pso_model.pkl"  # en iyi modelinizin adını buraya yazın
-FEATURES_PATH = "/Users/aynurbaktemur/Desktop/hasar_api/pso_features.npy"
+MODEL_PATH = "pso_model.pkl"  # en iyi modelinizin adını buraya yazın
+FEATURES_PATH = "pso_features.npy"
 
 model = joblib.load(MODEL_PATH)
 selected_features = np.load(FEATURES_PATH)
