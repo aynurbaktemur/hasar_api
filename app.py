@@ -40,6 +40,10 @@ def process_image(file_storage):
 
     return selected.reshape(1, -1), None
 
+@app.route('/')  # 👈 Kök dizin için route ekleyin
+def home():
+    return "API çalışıyor!"
+
 # Ana API endpoint
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -62,4 +66,4 @@ def predict():
     })
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=10000)
