@@ -64,6 +64,12 @@ def predict():
         'tahmin': 'Hasarlı' if prediction == 1 else 'Hasarsız',
         'hasar_orani': round(float(probability) * 100, 2)
     })
+    
+@app.route('/health',methods=["GET"]) #bu kısmı kod bloğunda ekle
 
+def get_health():
+
+    return {"status":"running"}
+    
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=10000)
+    app.run(debug=False, host='0.0.0.0', port=10000)
